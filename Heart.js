@@ -36,10 +36,6 @@ class Heart{
 		    return random([color(255, 33, 142), color(255,214,0), color(33,176,254)])
 		} else if (currentColor === 5){
 		    return random([color(90, 207, 250), color(245, 171, 186), color(255,255,255)])
-		} else if (currentColor === 6){
-		    //color = pygame.Color(255)
-		    //color.hsva = (random.randint(1,350),100,100)
-		    //return color
 		}
 		return color(255, 0, random(0,150))
 	}
