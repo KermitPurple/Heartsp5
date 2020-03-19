@@ -1,4 +1,5 @@
 var hearts
+var currentColor = 1;
 
 function setup(){
 	createCanvas(window.innerWidth-20,window.innerHeight-20);
@@ -15,6 +16,12 @@ function draw(){
 	strokeWeight(3);
 	for(let i = 0; i < hearts.length; i++){
 		hearts[i].random(width, height);
-		hearts[i].draw();
+		hearts[i].draw(currentColor);
 	}
+}
+
+function keyPressed(){
+	if(keyCode >= 48 && keyCode <= 57){//48 is '0' and 57 is '9'
+		currentColor = keyCode - 48;
+	};
 }

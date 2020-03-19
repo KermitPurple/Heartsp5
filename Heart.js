@@ -12,8 +12,8 @@ class Heart{
 		return this
 	}
 
-	draw(){
-		fill(color(255, 0, random(0,150)));
+	draw(currentColor){
+		fill(this.getColor(currentColor));
 		beginShape();
 		for(let theta = 0; theta < TWO_PI; theta += 0.01){
 			let x = 16 * pow(sin(theta), 3);
@@ -23,5 +23,12 @@ class Heart{
 			vertex(x,y);
 		}
 		endShape();
+	}
+
+	getColor(currentColor){
+		if(currentColor === 1){
+			return color(255, 0, random(0,150))
+		}
+		return color(255, 0, random(0,150))
 	}
 }
