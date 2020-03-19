@@ -11,7 +11,7 @@ function setup(){
 
 function draw(){
 	background(255);
-	frameRate(1);
+	frameRate(5);
 	stroke(0);
 	strokeWeight(3);
 	for(let i = 0; i < hearts.length; i++){
